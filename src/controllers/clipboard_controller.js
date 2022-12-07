@@ -14,6 +14,12 @@ this.hasSourceTarget evaluates to true if there is a source target or false if n
 
 export default class extends Controller {
     static targets = [ "source" ]
+    static classes = [ "supported" ]
+    connect() {
+        if ("clipboard" in navigator) {
+          this.element.classList.add(this.supportedClass);
+        }
+    }
     copy() {
         event.preventDefault()
         navigator.clipboard.writeText(this.sourceTarget.value)

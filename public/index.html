@@ -10,18 +10,18 @@
     <input type="text" data-hello-target="name">
     <button data-action="click->hello#greet">Greet</button>
   </div>
-  <div data-controller="clipboard">
+  <div data-controller="clipboard" data-clipboard-supported-class="clipboard--supported">
     PIN: <input type="text" data-clipboard-target="source" value="1234" readonly>
-    <button data-action="clipboard#copy">Copy to Clipboard</button>
+    <button data-action="clipboard#copy" class="clipboard-button">Copy to Clipboard</button>
   </div>
-  <div data-controller="clipboard">
+  <div data-controller="clipboard" data-clipboard-supported-class="clipboard--supported">
     PIN: <input type="text" data-clipboard-target="source" value="3333" readonly>
-    <button data-action="clipboard#copy">Copy to Clipboard</button>
+    <button data-action="clipboard#copy" class="clipboard-button">Copy to Clipboard</button>
   </div>
   <h5>Any kind of element can have actions and targets: link example</h5>
-  <div data-controller="clipboard">
+  <div data-controller="clipboard" data-clipboard-supported-class="clipboard--supported">
     PIN: <input data-clipboard-target="source" type="text" value="3737" readonly>
-    <a href="#" data-action="clipboard#copy">Copy to Clipboard</a>
+    <a href="#" data-action="clipboard#copy" class="clipboard-button">Copy to Clipboard</a>
   </div>
 </body>
 </html>
